@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+    android:keepScreenOn="true"
+   android:orientation="vertical"
+   tools:context="citrusbits.com.customcamera.MainActivity">
+
+  <ImageView
+     android:id="@+id/pic"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_above="@+id/cameraBottomLayout"
+     android:layout_below="@+id/topPanel"
+     android:layout_marginBottom="-20dp"/>
+
+  <FrameLayout
+     android:id="@+id/camera_frame"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_weight="1">
+
+
+    <SurfaceView
+       android:id="@+id/preview_view"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
+  </FrameLayout>
+
+
+
+  <FrameLayout
+     android:id="@+id/cameraBottomLayout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:background="@drawable/bottom_black_layer">
+
+
+
+
+    <LinearLayout
+       android:id="@+id/bottomLayout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:gravity="center"
+
+       android:orientation="horizontal"
+       android:weightSum="3">
+
+      <RelativeLayout
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/bigRed"
+         android:layout_alignTop="@+id/bigRed"
+         android:layout_weight="1">
+
+        <Button
+           android:id="@+id/capture_image_button"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           android:layout_centerHorizontal="true"
+           android:layout_weight="1"
+           android:background="@android:color/transparent"/>
+
+        <ImageButton
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"
+           android:layout_weight="1"
+           android:background="@drawable/camera_flip"
+           android:text="@string/capture_image"/>
+      </RelativeLayout>
+
+      <RelativeLayout
+         android:id="@+id/bigRed"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+
+        <ImageButton
+           android:id="@+id/done_button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/capture_btn"
+           android:text="@string/done"/>
+      </RelativeLayout>
+
+      <RelativeLayout
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+
+        <ImageButton
+           android:id="@+id/btnFlash"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/flash_icon"
+           android:text="@string/done"/>
+      </RelativeLayout>
+    </LinearLayout>
+  </FrameLayout>
+
+  <RelativeLayout
+     android:id="@+id/topPanel"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentTop="true"
+     >
+
+    <Button
+       android:id="@+id/crossCamera"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:background="@android:color/transparent"
+       />
+
+    <ImageButton
+       android:id="@+id/crossCameraImage"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_centerVertical="true"
+       android:layout_marginLeft="10dp"
+       android:background="@drawable/back_btn"
+       android:minHeight="1dp"
+
+       android:minWidth="1dp"/>
+
+
+
+  </RelativeLayout>
+
+
+</RelativeLayout>

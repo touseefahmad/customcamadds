@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+  <ImageView
+     android:id="@+id/pictureView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_marginLeft="0dp"
+     android:layout_marginRight="0dp"
+     android:layout_above="@+id/bottomCropPic"
+     android:layout_alignLeft="@+id/bottomCropPic"
+     android:layout_alignRight="@+id/bottomCropPic"
+     android:scaleType="centerCrop"
+     android:background="@android:color/white"
+     />
+
+    <citrusbits.com.customcamera.CanvasView
+       android:id="@+id/SignatureCanvasView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_above="@+id/bottomCropPic"
+
+       />
+
+
+
+
+  <include
+     android:id="@+id/bottomCropPic"
+     layout="@layout/crop_pic_bottom"
+     android:layout_alignParentBottom="true"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent">
+  </include>
+  <RelativeLayout
+     android:id="@+id/topPanelCrop"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignParentTop="true"
+     android:background="@mipmap/camera_top">
+
+    <Button
+       android:id="@+id/crossCameraCrop"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:background="@android:color/transparent"
+       />
+
+    <ImageButton
+       android:id="@+id/CrossCropImage"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_centerVertical="true"
+       android:layout_marginLeft="10dp"
+       android:background="@mipmap/cross_icon_1"
+       android:minHeight="1dp"
+
+       android:minWidth="1dp"/>
+
+    <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:layout_centerVertical="true"
+       android:clickable="false"
+       android:editable="false"
+       android:text=" Crop Picture"
+       android:textColor="#ffffff"
+       android:textSize="18dp"
+       android:textStyle="bold"/>
+
+  </RelativeLayout>
+
+
+</RelativeLayout>
